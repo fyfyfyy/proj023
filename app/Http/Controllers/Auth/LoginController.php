@@ -26,7 +26,9 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    //protected $redirectTo = RouteServiceProvider::HOME;  這是原本的登入導向路徑
+    protected $redirectTo = '/admin';
+
 
     /**
      * Create a new controller instance.
@@ -37,4 +39,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+    //這是多加的使用者驗證
+    public function username()
+    {
+        return 'username';
+    }
+
 }
