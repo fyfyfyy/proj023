@@ -68,25 +68,3 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function() {
     Route::get('store', 'Backend\StoreController@edit')->name('store.edit');
     Route::post('store', 'Backend\StoreController@update')->name('store.update');
 });
-
-
-//前端的登記
-
-// Website的更新
-//Route::get('/', 'Frontend\WebsiteController')->name('website');
-//Route::post('/', 'Frontend\WebsiteController')->name('website');
-
-// Home的更新
-Route::get('home', 'Frontend\HomeController@index')->name('home');
-//Route::post('home', 'Frontend\HomeController')->name('home');
-
-// About的更新
-Route::get('about', 'Frontend\AboutController@index')->name('about');
-//Route::post('about', 'Frontend\AboutController')->name('about');
-
-// Product的增刪改查還有index頁面
-Route::resource('product', 'Frontend\ProductController@index', ['except'=> ['show']]);
-
-// Store的更新
-Route::get('store', 'Frontend\StoreController@index')->name('store');
-//Route::post('store', 'Frontend\StoreController')->name('store');
