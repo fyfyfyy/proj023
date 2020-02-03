@@ -78,6 +78,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function() {
 
 // Home的更新
 Route::get('home', 'Frontend\HomeController@index')->name('home');
+Route::get('home', 'Frontend\HomeController@index')->name('website');
 //Route::post('home', 'Frontend\HomeController')->name('home');
 
 // About的更新
